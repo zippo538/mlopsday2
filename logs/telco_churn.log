@@ -1,0 +1,270 @@
+2025-01-11 07:25:57 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:25:57 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:25:58 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:25:58 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:25:58 | telco_churn | INFO | Initialized DataLoader with path: data/TelcoCustomerChurn.csv
+2025-01-11 07:25:58 | telco_churn | INFO | Loading data from data/TelcoCustomerChurn.csv
+2025-01-11 07:25:58 | telco_churn | ERROR | Error loading data: [Errno 2] No such file or directory: 'data/TelcoCustomerChurn.csv'
+2025-01-11 07:25:58 | telco_churn | ERROR | Pipeline execution failed: [Errno 2] No such file or directory: 'data/TelcoCustomerChurn.csv'
+2025-01-11 07:26:40 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:26:40 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:26:41 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:26:41 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:26:41 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:26:41 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:26:41 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 07:26:41 | telco_churn | INFO | Validating data
+2025-01-11 07:26:41 | telco_churn | INFO | Data validation completed
+2025-01-11 07:26:41 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 07:26:41 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 07:26:41 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 07:26:41 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 07:26:41 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 07:26:41 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 07:26:41 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 07:26:41 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 07:26:42 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 07:26:42 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_prediction
+2025-01-11 07:26:42 | telco_churn | INFO | Starting training of all models
+2025-01-11 07:26:42 | telco_churn | INFO | Training decision_tree model
+2025-01-11 07:26:42 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 07:26:42 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 07:26:46 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 07:26:46 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 07:26:46 | telco_churn | INFO | Training random_forest model
+2025-01-11 07:26:46 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 07:26:46 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 07:26:49 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 07:26:49 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 07:26:49 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 07:26:49 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 07:26:49 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 07:26:52 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 07:26:52 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 07:26:52 | telco_churn | INFO | Selecting best model
+2025-01-11 07:26:52 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 07:26:52 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 07:26:52 | telco_churn | INFO | Completed training all models
+2025-01-11 07:26:52 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 07:26:52 | telco_churn | INFO | Model Evaluation Metrics:
+2025-01-11 07:26:52 | telco_churn | INFO | Model Metrics:
+2025-01-11 07:26:52 | telco_churn | INFO | decision_tree: 
+    Accuracy: 0.794180269694819
+    Precision: 0.6055979643765903
+    Recall: 0.6380697050938338
+    F1 Score: 0.6214099216710183
+    ROC AUC: 0.8372853416419099
+2025-01-11 07:26:52 | telco_churn | INFO | random_forest: 
+    Accuracy: 0.808374733853797
+    Precision: 0.6782006920415224
+    Recall: 0.5254691689008043
+    F1 Score: 0.5921450151057401
+    ROC AUC: 0.8568103243036219
+2025-01-11 07:26:52 | telco_churn | INFO | gradient_boosting: 
+    Accuracy: 0.8112136266855926
+    Precision: 0.6851211072664359
+    Recall: 0.5308310991957105
+    F1 Score: 0.5981873111782477
+    ROC AUC: 0.8591302907656795
+2025-01-11 07:26:52 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 07:31:47 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:31:47 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:31:47 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:31:48 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 07:31:48 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 07:31:48 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:31:48 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:31:48 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:31:48 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 07:31:48 | telco_churn | INFO | Validating data
+2025-01-11 07:31:48 | telco_churn | INFO | Data validation completed
+2025-01-11 07:31:48 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 07:31:48 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 07:31:48 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 07:31:48 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 07:31:48 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 07:31:48 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 07:31:48 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 07:31:48 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 07:31:48 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 07:31:48 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_prediction
+2025-01-11 07:31:48 | telco_churn | INFO | Starting training of all models
+2025-01-11 07:31:48 | telco_churn | INFO | Training decision_tree model
+2025-01-11 07:31:48 | telco_churn | ERROR | Error training decision_tree model: Run with UUID 94f33dc650334e8e974cb32989a3994e is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:31:48 | telco_churn | ERROR | Error training models: Run with UUID 94f33dc650334e8e974cb32989a3994e is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:31:48 | telco_churn | ERROR | Pipeline execution failed: Run with UUID 94f33dc650334e8e974cb32989a3994e is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:32:17 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:32:17 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:32:17 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:32:18 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 07:32:18 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 07:32:18 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:32:18 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:32:18 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:32:18 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 07:32:18 | telco_churn | INFO | Validating data
+2025-01-11 07:32:18 | telco_churn | INFO | Data validation completed
+2025-01-11 07:32:18 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 07:32:18 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 07:32:18 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 07:32:18 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 07:32:18 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 07:32:18 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 07:32:18 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 07:32:18 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 07:32:18 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 07:32:18 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_prediction
+2025-01-11 07:32:18 | telco_churn | INFO | Starting training of all models
+2025-01-11 07:32:18 | telco_churn | INFO | Training decision_tree model
+2025-01-11 07:32:18 | telco_churn | ERROR | Error training decision_tree model: Run with UUID fb591d030c1e4d90aa0a0cb9f81e47c8 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:32:18 | telco_churn | ERROR | Error training models: Run with UUID fb591d030c1e4d90aa0a0cb9f81e47c8 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:32:18 | telco_churn | ERROR | Pipeline execution failed: Run with UUID fb591d030c1e4d90aa0a0cb9f81e47c8 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-01-11 07:33:55 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:33:55 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:33:55 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 07:33:55 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:33:56 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 07:33:56 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 07:33:56 | telco_churn | INFO | Started pipeline run with ID: def82b18e2a74e9cadc16f4f0a988bde
+2025-01-11 07:33:56 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:33:56 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:33:56 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:33:56 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 07:33:56 | telco_churn | INFO | Validating data
+2025-01-11 07:33:56 | telco_churn | INFO | Data validation completed
+2025-01-11 07:33:56 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 07:33:56 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 07:33:56 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 07:33:56 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 07:33:56 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 07:33:56 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 07:33:56 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 07:33:56 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 07:33:56 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 07:33:56 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 07:33:56 | telco_churn | INFO | Starting training of all models
+2025-01-11 07:33:56 | telco_churn | INFO | Training decision_tree model
+2025-01-11 07:33:56 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 07:33:56 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 07:33:56 | telco_churn | ERROR | Error training decision_tree model: 'ModelTrainer' object has no attribute '_calculate_metrics'
+2025-01-11 07:33:56 | telco_churn | ERROR | Error training models: 'ModelTrainer' object has no attribute '_calculate_metrics'
+2025-01-11 07:33:56 | telco_churn | ERROR | Pipeline execution failed: 'ModelTrainer' object has no attribute '_calculate_metrics'
+2025-01-11 07:34:50 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 07:34:50 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 07:34:50 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 07:34:50 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 07:34:51 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 07:34:51 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 07:34:51 | telco_churn | INFO | Started pipeline run with ID: 82c81152a08748c1a1dbf9b1e53fe229
+2025-01-11 07:34:51 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 07:34:51 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:34:51 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 07:34:51 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 07:34:51 | telco_churn | INFO | Validating data
+2025-01-11 07:34:51 | telco_churn | INFO | Data validation completed
+2025-01-11 07:34:51 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 07:34:51 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 07:34:51 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 07:34:51 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 07:34:51 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 07:34:51 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 07:34:51 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 07:34:51 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 07:34:51 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 07:34:51 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 07:34:51 | telco_churn | INFO | Starting training of all models
+2025-01-11 07:34:51 | telco_churn | INFO | Training decision_tree model
+2025-01-11 07:34:51 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 07:34:51 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 07:34:55 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 07:34:55 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 07:34:55 | telco_churn | INFO | Training random_forest model
+2025-01-11 07:34:55 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 07:34:55 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 07:34:58 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 07:34:58 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 07:34:58 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 07:34:58 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 07:34:58 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 07:35:01 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 07:35:01 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 07:35:01 | telco_churn | INFO | Selecting best model
+2025-01-11 07:35:02 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 07:35:02 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 07:35:02 | telco_churn | INFO | Completed training all models
+2025-01-11 07:35:02 | telco_churn | INFO | Pipeline execution completed successfully
