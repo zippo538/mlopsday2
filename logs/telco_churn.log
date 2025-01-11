@@ -268,3 +268,561 @@
 2025-01-11 07:35:02 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
 2025-01-11 07:35:02 | telco_churn | INFO | Completed training all models
 2025-01-11 07:35:02 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:07:32 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:07:32 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:07:32 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:07:33 | telco_churn | ERROR | Error loading model: No versions of model with name 'telco_churn_random_forest' and stage 'Production' found
+2025-01-11 08:09:04 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:09:04 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:09:04 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 08:09:04 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:09:05 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:09:05 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:09:06 | telco_churn | INFO | Started pipeline run with ID: 95b5cc982df2418cbdf4e295f5d6293e
+2025-01-11 08:09:06 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:09:06 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:09:06 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:09:06 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 08:09:06 | telco_churn | INFO | Validating data
+2025-01-11 08:09:06 | telco_churn | INFO | Data validation completed
+2025-01-11 08:09:06 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 08:09:06 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:09:06 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 08:09:06 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 08:09:06 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 08:09:06 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 08:09:06 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 08:09:06 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 08:09:06 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 08:09:06 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 08:09:06 | telco_churn | INFO | Starting training of all models
+2025-01-11 08:09:06 | telco_churn | INFO | Training decision_tree model
+2025-01-11 08:09:06 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 08:09:06 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 08:09:09 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 08:09:09 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:09:09 | telco_churn | INFO | Training random_forest model
+2025-01-11 08:09:09 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 08:09:09 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 08:09:12 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 08:09:12 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 08:09:12 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 08:09:12 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 08:09:12 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 08:09:16 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 08:09:16 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 08:09:16 | telco_churn | INFO | Selecting best model
+2025-01-11 08:09:16 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 08:09:16 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:09:16 | telco_churn | INFO | Completed training all models
+2025-01-11 08:09:16 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:09:26 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:09:26 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:09:26 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:09:26 | telco_churn | INFO | Model telco_churn_decision_tree already registered
+2025-01-11 08:09:26 | telco_churn | INFO | Transitioned telco_churn_decision_tree version 2 to Production
+2025-01-11 08:09:26 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\11e16a1e2d274b7397f56a89b65501df\artifacts\model\.'
+2025-01-11 08:10:09 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:10:09 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:10:51 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:10:51 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:11:39 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:11:39 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:11:50 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:11:50 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:11:50 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:11:51 | telco_churn | INFO | Selected model path: runs:/11e16a1e2d274b7397f56a89b65501df/model
+2025-01-11 08:11:51 | telco_churn | INFO | Loading model from path: runs:/11e16a1e2d274b7397f56a89b65501df/model
+2025-01-11 08:11:51 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\11e16a1e2d274b7397f56a89b65501df\artifacts\model'
+2025-01-11 08:15:48 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:15:48 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:15:48 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:15:49 | telco_churn | INFO | Selected model path: runs:/11e16a1e2d274b7397f56a89b65501df/model
+2025-01-11 08:15:49 | telco_churn | INFO | Loading model from path: runs:/11e16a1e2d274b7397f56a89b65501df/model
+2025-01-11 08:15:49 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\11e16a1e2d274b7397f56a89b65501df\artifacts\model'
+2025-01-11 08:16:31 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:16:31 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:16:31 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:16:33 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:16:33 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:16:33 | telco_churn | INFO | Started pipeline run with ID: c463862bae554c628b9572709d77b8b0
+2025-01-11 08:16:33 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:16:33 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:16:33 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:16:33 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 08:16:33 | telco_churn | INFO | Validating data
+2025-01-11 08:16:33 | telco_churn | INFO | Data validation completed
+2025-01-11 08:16:33 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 08:16:33 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:16:33 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 08:16:33 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 08:16:33 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 08:16:33 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 08:16:33 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 08:16:33 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 08:16:33 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 08:16:33 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 08:16:33 | telco_churn | INFO | Starting training of all models
+2025-01-11 08:16:33 | telco_churn | INFO | Training decision_tree model
+2025-01-11 08:16:33 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 08:16:33 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 08:16:38 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 08:16:38 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:16:38 | telco_churn | INFO | Training random_forest model
+2025-01-11 08:16:38 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 08:16:38 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 08:16:42 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 08:16:42 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 08:16:42 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 08:16:42 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 08:16:42 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 08:16:46 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 08:16:46 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 08:16:46 | telco_churn | INFO | Selecting best model
+2025-01-11 08:16:46 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 08:16:46 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:16:46 | telco_churn | INFO | Completed training all models
+2025-01-11 08:16:46 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:29:35 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:29:35 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:29:36 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 08:29:36 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:29:36 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:29:36 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:29:37 | telco_churn | INFO | Started pipeline run with ID: 1e9fb1841c224fd0a743007fa599bf60
+2025-01-11 08:29:37 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:29:37 | telco_churn | INFO | Initialized DataLoader with path: data/TelcoCustomerChurn.csv
+2025-01-11 08:29:37 | telco_churn | INFO | Loading data from data/TelcoCustomerChurn.csv
+2025-01-11 08:29:37 | telco_churn | ERROR | Error loading data: [Errno 2] No such file or directory: 'data/TelcoCustomerChurn.csv'
+2025-01-11 08:29:37 | telco_churn | ERROR | Pipeline execution failed: [Errno 2] No such file or directory: 'data/TelcoCustomerChurn.csv'
+2025-01-11 08:29:56 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:29:56 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:29:56 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 08:29:56 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:29:57 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:29:57 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:29:57 | telco_churn | INFO | Started pipeline run with ID: 32b9f675ff2c4fad8e389430bddaad79
+2025-01-11 08:29:57 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:29:57 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:29:57 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:29:57 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 08:29:57 | telco_churn | INFO | Validating data
+2025-01-11 08:29:57 | telco_churn | INFO | Data validation completed
+2025-01-11 08:29:57 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 08:29:57 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:29:57 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 08:29:57 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 08:29:57 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 08:29:57 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 08:29:57 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 08:29:57 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 08:29:57 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 08:29:57 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 08:29:57 | telco_churn | INFO | Starting training of all models
+2025-01-11 08:29:57 | telco_churn | INFO | Training decision_tree model
+2025-01-11 08:29:57 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 08:29:57 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 08:30:01 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 08:30:01 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:30:01 | telco_churn | INFO | Training random_forest model
+2025-01-11 08:30:01 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 08:30:01 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 08:30:04 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 08:30:04 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 08:30:04 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 08:30:04 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 08:30:04 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 08:30:07 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 08:30:07 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 08:30:07 | telco_churn | INFO | Selecting best model
+2025-01-11 08:30:07 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 08:30:07 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:30:07 | telco_churn | INFO | Completed training all models
+2025-01-11 08:30:07 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:31:03 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:31:03 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:31:23 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:31:23 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:32:39 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:32:39 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:33:01 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:33:01 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:33:23 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:33:23 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:33:24 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:33:24 | telco_churn | INFO | Run 8912255f949f4a11b2921489b9c1186d score: 0.629739813382426
+2025-01-11 08:33:24 | telco_churn | INFO | Run db5e0ad7e58749a1a4ba89e70ea12b27 score: 0.5645092051869791
+2025-01-11 08:33:24 | telco_churn | INFO | Run c18ac4b1b69f48f6b083b5eddd22f92f score: 0.5588070920032722
+2025-01-11 08:33:24 | telco_churn | INFO | Trying model path: runs:/8912255f949f4a11b2921489b9c1186d/model
+2025-01-11 08:33:24 | telco_churn | WARNING | Could not load model from runs:/8912255f949f4a11b2921489b9c1186d/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:33:24 | telco_churn | INFO | Trying model path: mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model
+2025-01-11 08:33:24 | telco_churn | WARNING | Could not load model from mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model: No such file or directory: 'mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:33:24 | telco_churn | INFO | Trying model path: file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts
+2025-01-11 08:33:24 | telco_churn | WARNING | Could not load model from file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts: Could not find a registered artifact repository for: d:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+2025-01-11 08:33:24 | telco_churn | ERROR | Error loading model: Could not find valid model path
+2025-01-11 08:33:46 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:33:46 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:33:46 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:33:47 | telco_churn | INFO | Run 8912255f949f4a11b2921489b9c1186d score: 0.629739813382426
+2025-01-11 08:33:47 | telco_churn | INFO | Run db5e0ad7e58749a1a4ba89e70ea12b27 score: 0.5645092051869791
+2025-01-11 08:33:47 | telco_churn | INFO | Run c18ac4b1b69f48f6b083b5eddd22f92f score: 0.5588070920032722
+2025-01-11 08:33:47 | telco_churn | INFO | Trying model path: runs:/8912255f949f4a11b2921489b9c1186d/model
+2025-01-11 08:33:47 | telco_churn | WARNING | Could not load model from runs:/8912255f949f4a11b2921489b9c1186d/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:33:47 | telco_churn | INFO | Trying model path: mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model
+2025-01-11 08:33:47 | telco_churn | WARNING | Could not load model from mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model: No such file or directory: 'mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:33:47 | telco_churn | INFO | Trying model path: file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts
+2025-01-11 08:33:47 | telco_churn | WARNING | Could not load model from file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts: Could not find a registered artifact repository for: d:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+2025-01-11 08:33:47 | telco_churn | ERROR | Error loading model: Could not find valid model path
+2025-01-11 08:35:08 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:35:08 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:35:08 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:35:09 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:35:09 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:35:09 | telco_churn | INFO | Run 8912255f949f4a11b2921489b9c1186d score: 0.629739813382426
+2025-01-11 08:35:09 | telco_churn | INFO | Run db5e0ad7e58749a1a4ba89e70ea12b27 score: 0.5645092051869791
+2025-01-11 08:35:09 | telco_churn | INFO | Run c18ac4b1b69f48f6b083b5eddd22f92f score: 0.5588070920032722
+2025-01-11 08:35:09 | telco_churn | INFO | Best run ID: 8912255f949f4a11b2921489b9c1186d
+2025-01-11 08:35:09 | telco_churn | INFO | Run artifact URI: file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts
+2025-01-11 08:35:09 | telco_churn | INFO | Trying model path: D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts\model
+2025-01-11 08:35:09 | telco_churn | WARNING | Error loading from D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts\model: Could not find a registered artifact repository for: d:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+2025-01-11 08:35:09 | telco_churn | INFO | Trying model path: runs:/8912255f949f4a11b2921489b9c1186d/model
+2025-01-11 08:35:09 | telco_churn | WARNING | Error loading from runs:/8912255f949f4a11b2921489b9c1186d/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:35:09 | telco_churn | INFO | Trying model path: mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model
+2025-01-11 08:35:09 | telco_churn | WARNING | Error loading from mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model: No such file or directory: 'mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:35:09 | telco_churn | ERROR | Error loading model: Could not find valid model path. Errors:
+Error loading from D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d/artifacts\model: Could not find a registered artifact repository for: d:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8912255f949f4a11b2921489b9c1186d. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+Error loading from runs:/8912255f949f4a11b2921489b9c1186d/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+Error loading from mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts/model: No such file or directory: 'mlruns\1\8912255f949f4a11b2921489b9c1186d\artifacts\model'
+2025-01-11 08:39:28 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:39:28 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:39:28 | telco_churn | INFO | Deleted existing MLflow database
+2025-01-11 08:39:28 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:39:29 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:39:29 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:39:29 | telco_churn | INFO | Started pipeline run with ID: 4a6a4e53d16a45fd996f2b0de75464eb
+2025-01-11 08:39:29 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:39:29 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:39:29 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:39:29 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 08:39:29 | telco_churn | INFO | Validating data
+2025-01-11 08:39:29 | telco_churn | INFO | Data validation completed
+2025-01-11 08:39:29 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 08:39:29 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:39:29 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 08:39:29 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 08:39:29 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 08:39:29 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 08:39:29 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 08:39:29 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 08:39:29 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 08:39:29 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 08:39:29 | telco_churn | INFO | Starting training of all models
+2025-01-11 08:39:29 | telco_churn | INFO | Training decision_tree model
+2025-01-11 08:39:29 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 08:39:29 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 08:39:33 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 08:39:33 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:39:33 | telco_churn | INFO | Training random_forest model
+2025-01-11 08:39:33 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 08:39:33 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 08:39:36 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 08:39:36 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 08:39:36 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 08:39:36 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 08:39:36 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 08:39:40 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 08:39:40 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 08:39:40 | telco_churn | INFO | Selecting best model
+2025-01-11 08:39:40 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 08:39:40 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:39:40 | telco_churn | INFO | Completed training all models
+2025-01-11 08:39:40 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:39:58 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:39:58 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:39:58 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:39:59 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:39:59 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:39:59 | telco_churn | INFO | Run 8346895a7a1b4699985fa149a2f17b39 score: 0.629739813382426
+2025-01-11 08:39:59 | telco_churn | INFO | Run e89217ca3971448da7c1a63adf72373c score: 0.5645092051869791
+2025-01-11 08:39:59 | telco_churn | INFO | Run b61c5afe6a0b4581a3c9740fbe0c9cf9 score: 0.5588070920032722
+2025-01-11 08:39:59 | telco_churn | INFO | Best run ID: 8346895a7a1b4699985fa149a2f17b39
+2025-01-11 08:39:59 | telco_churn | INFO | Run artifact URI: file:///D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39/artifacts
+2025-01-11 08:39:59 | telco_churn | INFO | Trying model path: D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39/artifacts\model
+2025-01-11 08:39:59 | telco_churn | WARNING | Error loading from D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39/artifacts\model: Could not find a registered artifact repository for: d:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+2025-01-11 08:39:59 | telco_churn | INFO | Trying model path: runs:/8346895a7a1b4699985fa149a2f17b39/model
+2025-01-11 08:39:59 | telco_churn | WARNING | Error loading from runs:/8346895a7a1b4699985fa149a2f17b39/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+2025-01-11 08:39:59 | telco_churn | INFO | Trying model path: mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model
+2025-01-11 08:39:59 | telco_churn | WARNING | Error loading from mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model: No such file or directory: 'mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+2025-01-11 08:39:59 | telco_churn | ERROR | Error loading model: Could not find valid model path. Errors:
+Error loading from D:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39/artifacts\model: Could not find a registered artifact repository for: d:/programming/work/dibimbing/MLOPS/day 26/mlruns/1/8346895a7a1b4699985fa149a2f17b39. Currently registered schemes are: ['', 'file', 's3', 'r2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts']
+Error loading from runs:/8346895a7a1b4699985fa149a2f17b39/model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+Error loading from mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model: No such file or directory: 'mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+2025-01-11 08:41:38 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:41:38 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:41:38 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:41:39 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:41:39 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:41:39 | telco_churn | INFO | Run 8346895a7a1b4699985fa149a2f17b39 score: 0.629739813382426
+2025-01-11 08:41:39 | telco_churn | INFO | Run e89217ca3971448da7c1a63adf72373c score: 0.5645092051869791
+2025-01-11 08:41:39 | telco_churn | INFO | Run b61c5afe6a0b4581a3c9740fbe0c9cf9 score: 0.5588070920032722
+2025-01-11 08:41:39 | telco_churn | INFO | Best run ID: 8346895a7a1b4699985fa149a2f17b39
+2025-01-11 08:41:39 | telco_churn | INFO | Trying to load model from: runs:/8346895a7a1b4699985fa149a2f17b39/gradient_boosting
+2025-01-11 08:41:39 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\gradient_boosting'
+2025-01-11 08:41:39 | telco_churn | INFO | Trying alternative path: runs:/8346895a7a1b4699985fa149a2f17b39/model
+2025-01-11 08:41:39 | telco_churn | ERROR | Error loading from alternative path: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+2025-01-11 08:41:39 | telco_churn | INFO | Trying local filesystem path: mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model
+2025-01-11 08:41:39 | telco_churn | ERROR | Error loading from local path: Local path does not exist: mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model
+2025-01-11 08:41:39 | telco_churn | ERROR | Error loading model: Could not load model from any path. Errors:
+Primary: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\gradient_boosting'
+Alternative: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts\model'
+Local: Local path does not exist: mlruns\1\8346895a7a1b4699985fa149a2f17b39\artifacts/model
+2025-01-11 08:43:01 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:43:01 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:43:01 | telco_churn | INFO | Starting pipeline execution
+2025-01-11 08:43:02 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-11 08:43:02 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-01-11 08:43:02 | telco_churn | INFO | Started pipeline run with ID: 40d3210306a744c8a2171294129bba99
+2025-01-11 08:43:02 | telco_churn | INFO | Step 1: Loading data
+2025-01-11 08:43:02 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:43:02 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-01-11 08:43:02 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-01-11 08:43:02 | telco_churn | INFO | Validating data
+2025-01-11 08:43:02 | telco_churn | INFO | Data validation completed
+2025-01-11 08:43:02 | telco_churn | INFO | Step 2: Preprocessing data
+2025-01-11 08:43:02 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:43:02 | telco_churn | INFO | Starting fit_transform process
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-01-11 08:43:02 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-01-11 08:43:02 | telco_churn | INFO | Fit_transform completed successfully
+2025-01-11 08:43:02 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-01-11 08:43:02 | telco_churn | INFO | Preprocessors saved successfully
+2025-01-11 08:43:02 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-01-11 08:43:02 | telco_churn | INFO | MLflow setup completed successfully
+2025-01-11 08:43:02 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-01-11 08:43:02 | telco_churn | INFO | Starting training of all models
+2025-01-11 08:43:02 | telco_churn | INFO | Training decision_tree model
+2025-01-11 08:43:02 | telco_churn | INFO | Creating model of type: decision_tree
+2025-01-11 08:43:02 | telco_churn | INFO | Successfully created decision_tree model
+2025-01-11 08:43:06 | telco_churn | INFO | Completed training decision_tree model
+2025-01-11 08:43:06 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:43:06 | telco_churn | INFO | Training random_forest model
+2025-01-11 08:43:06 | telco_churn | INFO | Creating model of type: random_forest
+2025-01-11 08:43:06 | telco_churn | INFO | Successfully created random_forest model
+2025-01-11 08:43:09 | telco_churn | INFO | Completed training random_forest model
+2025-01-11 08:43:09 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-01-11 08:43:09 | telco_churn | INFO | Training gradient_boosting model
+2025-01-11 08:43:09 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-01-11 08:43:09 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-01-11 08:43:13 | telco_churn | INFO | Completed training gradient_boosting model
+2025-01-11 08:43:13 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8591302907656795}
+2025-01-11 08:43:13 | telco_churn | INFO | Selecting best model
+2025-01-11 08:43:13 | telco_churn | INFO | Selected decision_tree as best model
+2025-01-11 08:43:13 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-01-11 08:43:13 | telco_churn | INFO | Completed training all models
+2025-01-11 08:43:13 | telco_churn | INFO | Pipeline execution completed successfully
+2025-01-11 08:43:29 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:43:29 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:43:29 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:43:29 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:43:29 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:43:29 | telco_churn | INFO | Run 115780abf3cc4b48886bfad7c613eaf5 score: 0.629739813382426
+2025-01-11 08:43:29 | telco_churn | INFO | Run fe8bb8c5c78c4b0fa044ac08f57116bc score: 0.5645092051869791
+2025-01-11 08:43:29 | telco_churn | INFO | Run 0b346ede29704e2bbb7a1c7c35b2c019 score: 0.5588070920032722
+2025-01-11 08:43:29 | telco_churn | INFO | Best run ID: 115780abf3cc4b48886bfad7c613eaf5
+2025-01-11 08:43:29 | telco_churn | INFO | Trying to load model from: runs:/115780abf3cc4b48886bfad7c613eaf5/gradient_boosting
+2025-01-11 08:43:30 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+2025-01-11 08:43:30 | telco_churn | INFO | Trying alternative path: runs:/115780abf3cc4b48886bfad7c613eaf5/model
+2025-01-11 08:43:30 | telco_churn | ERROR | Error loading from alternative path: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+2025-01-11 08:43:30 | telco_churn | INFO | Trying local filesystem path: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:43:30 | telco_churn | ERROR | Error loading from local path: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:43:30 | telco_churn | ERROR | Error loading model: Could not load model from any path. Errors:
+Primary: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+Alternative: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+Local: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:44:21 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:44:21 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:44:21 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:44:22 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:44:22 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:44:22 | telco_churn | INFO | Run 115780abf3cc4b48886bfad7c613eaf5 score: 0.629739813382426
+2025-01-11 08:44:22 | telco_churn | INFO | Run fe8bb8c5c78c4b0fa044ac08f57116bc score: 0.5645092051869791
+2025-01-11 08:44:22 | telco_churn | INFO | Run 0b346ede29704e2bbb7a1c7c35b2c019 score: 0.5588070920032722
+2025-01-11 08:44:22 | telco_churn | INFO | Best run ID: 115780abf3cc4b48886bfad7c613eaf5
+2025-01-11 08:44:22 | telco_churn | INFO | Trying to load model from: runs:/115780abf3cc4b48886bfad7c613eaf5/gradient_boosting
+2025-01-11 08:44:22 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+2025-01-11 08:44:22 | telco_churn | INFO | Trying alternative path: runs:/115780abf3cc4b48886bfad7c613eaf5/model
+2025-01-11 08:44:22 | telco_churn | ERROR | Error loading from alternative path: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+2025-01-11 08:44:22 | telco_churn | INFO | Trying local filesystem path: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:44:22 | telco_churn | ERROR | Error loading from local path: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:44:22 | telco_churn | ERROR | Error loading model: Could not load model from any path. Errors:
+Primary: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+Alternative: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+Local: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:44:57 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:44:57 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:44:57 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:44:57 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:44:57 | telco_churn | ERROR | Error loading model: 'DataProcessor' object has no attribute 'load'
+2025-01-11 08:45:03 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:45:03 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:45:03 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:45:03 | telco_churn | ERROR | Error loading model: name 'pick' is not defined
+2025-01-11 08:45:12 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:45:12 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:45:12 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:45:12 | telco_churn | ERROR | Error loading model: name 'pick' is not defined
+2025-01-11 08:45:23 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:45:23 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:45:24 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:45:24 | telco_churn | ERROR | Error loading model: file must have 'read' and 'readline' attributes
+2025-01-11 08:45:29 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:45:29 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:45:29 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:45:29 | telco_churn | ERROR | Error loading model: file must have 'read' and 'readline' attributes
+2025-01-11 08:46:06 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:46:06 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:46:06 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:46:06 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:46:06 | telco_churn | ERROR | Error loading model: 'DataProcessor' object has no attribute 'load'
+2025-01-11 08:47:44 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:47:44 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:47:44 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:47:44 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:47:44 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-01-11 08:47:44 | telco_churn | INFO | Preprocessors loaded successfully
+2025-01-11 08:47:44 | telco_churn | ERROR | Error loading model: 'NoneType' object is not callable
+2025-01-11 08:47:47 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:47:47 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:47:47 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:47:47 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:47:47 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-01-11 08:47:47 | telco_churn | INFO | Preprocessors loaded successfully
+2025-01-11 08:47:47 | telco_churn | INFO | Model and preprocessor loaded successfully
+2025-01-11 08:48:31 | telco_churn | INFO | Received prediction request for customer: 7590-VHVEG
+2025-01-11 08:48:31 | telco_churn | INFO | Starting transform process
+2025-01-11 08:48:31 | telco_churn | INFO | Transform completed successfully
+2025-01-11 08:48:31 | telco_churn | ERROR | Error making prediction: name 'model_info' is not defined
+2025-01-11 08:49:48 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:49:48 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:49:48 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:49:49 | telco_churn | INFO | Found experiment with ID: 1
+2025-01-11 08:49:49 | telco_churn | INFO | Found 4 runs
+2025-01-11 08:49:49 | telco_churn | INFO | Run 115780abf3cc4b48886bfad7c613eaf5 score: 0.629739813382426
+2025-01-11 08:49:49 | telco_churn | INFO | Run fe8bb8c5c78c4b0fa044ac08f57116bc score: 0.5645092051869791
+2025-01-11 08:49:49 | telco_churn | INFO | Run 0b346ede29704e2bbb7a1c7c35b2c019 score: 0.5588070920032722
+2025-01-11 08:49:49 | telco_churn | INFO | Best run ID: 115780abf3cc4b48886bfad7c613eaf5
+2025-01-11 08:49:49 | telco_churn | INFO | Trying to load model from: runs:/115780abf3cc4b48886bfad7c613eaf5/gradient_boosting
+2025-01-11 08:49:49 | telco_churn | ERROR | Error loading model: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+2025-01-11 08:49:49 | telco_churn | INFO | Trying alternative path: runs:/115780abf3cc4b48886bfad7c613eaf5/model
+2025-01-11 08:49:49 | telco_churn | ERROR | Error loading from alternative path: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+2025-01-11 08:49:49 | telco_churn | INFO | Trying local filesystem path: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:49:49 | telco_churn | ERROR | Error loading from local path: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:49:49 | telco_churn | ERROR | Error loading model: Could not load model from any path. Errors:
+Primary: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\gradient_boosting'
+Alternative: No such file or directory: 'D:\programming\work\dibimbing\MLOPS\day 26\mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts\model'
+Local: Local path does not exist: mlruns\1\115780abf3cc4b48886bfad7c613eaf5\artifacts/model
+2025-01-11 08:50:16 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:50:16 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:50:16 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:50:16 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:50:16 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-01-11 08:50:16 | telco_churn | INFO | Preprocessors loaded successfully
+2025-01-11 08:50:16 | telco_churn | INFO | Model and preprocessor loaded successfully
+2025-01-11 08:50:28 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:50:28 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:50:28 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:50:28 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:50:28 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-01-11 08:50:28 | telco_churn | INFO | Preprocessors loaded successfully
+2025-01-11 08:50:28 | telco_churn | INFO | Model and preprocessor loaded successfully
+2025-01-11 08:50:35 | telco_churn | INFO | Received prediction request for customer: 7590-VHVEG
+2025-01-11 08:50:35 | telco_churn | INFO | Starting transform process
+2025-01-11 08:50:35 | telco_churn | INFO | Transform completed successfully
+2025-01-11 08:50:35 | telco_churn | ERROR | Error making prediction: 1 validation error for ChurnPredictionResponse
+model_info
+  field required (type=value_error.missing)
+2025-01-11 08:51:11 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-01-11 08:51:11 | telco_churn | INFO | Configuration loaded successfully
+2025-01-11 08:51:11 | telco_churn | INFO | Loading best model from MLflow
+2025-01-11 08:51:12 | telco_churn | INFO | Initialized DataProcessor
+2025-01-11 08:51:12 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-01-11 08:51:12 | telco_churn | INFO | Preprocessors loaded successfully
+2025-01-11 08:51:12 | telco_churn | INFO | Model and preprocessor loaded successfully
+2025-01-11 08:51:12 | telco_churn | INFO | Received prediction request for customer: 7590-VHVEG
+2025-01-11 08:51:12 | telco_churn | INFO | Starting transform process
+2025-01-11 08:51:12 | telco_churn | INFO | Transform completed successfully
+2025-01-11 08:51:12 | telco_churn | INFO | Prediction completed for customer: 7590-VHVEG

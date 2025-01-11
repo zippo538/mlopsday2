@@ -1,0 +1,5 @@
+venv
+mlflowdb
+mlruns
+mlops_day2.egg-info
+logs

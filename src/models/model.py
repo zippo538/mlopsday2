@@ -108,6 +108,29 @@ class ChurnModel:
             raise ValueError("Model not built yet")
         return self.model.get_params()
     
+    def save_feature_importance(self, feature_names) -> Dict[str, float]:
+        """
+        Save feature importance
+        
+        Args:
+            feature_names: List of feature names
+            
+        Returns:
+            Dictionary of feature importances
+        """
+        if self.model is None:
+            raise ValueError("Model not trained yet")
+            
+        try:
+            importance = self.get_feature_importance()
+            if importance is not None:
+                self.feature_importance = dict(zip(feature_names, importance))
+                return self.feature_importance
+            return None
+        except Exception as e:
+            logger.error(f"Error saving feature importance: {str(e)}")
+            raise
+    
     def get_feature_importance(self) -> Dict[str, float]:
         """Get feature importance if available"""
         if self.model is None:

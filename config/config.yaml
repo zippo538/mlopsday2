@@ -5,7 +5,8 @@ preprocessing_path: "models/preprocessing"
 # MLflow Configuration
 mlflow:
   tracking_uri: "sqlite:///mlflow.db"
-  experiment_name: "telco_churn_production"
+  experiment_name: "telco_churn_experiment"
+  artifact_path: "model"
 
 # Model Parameters
 model_params:
@@ -48,3 +49,11 @@ numerical_features:
   - "tenure"
   - "MonthlyCharges"
   - "TotalCharges"
+
+# API Configuration
+api:
+  title: "Telco Customer Churn Prediction API"
+  description: "API for predicting customer churn"
+  version: "1.0.0"
+  host: "0.0.0.0"
+  port: 8000
