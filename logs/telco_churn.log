@@ -826,3 +826,120 @@ model_info
 2025-01-11 08:51:12 | telco_churn | INFO | Starting transform process
 2025-01-11 08:51:12 | telco_churn | INFO | Transform completed successfully
 2025-01-11 08:51:12 | telco_churn | INFO | Prediction completed for customer: 7590-VHVEG
+2025-10-27 07:29:48 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:29:48 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:29:49 | telco_churn | INFO | Deleted existing MLflow database
+2025-10-27 07:29:49 | telco_churn | INFO | Starting pipeline execution
+2025-10-27 07:30:03 | telco_churn | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-10-27 07:30:03 | telco_churn | INFO | Experiment name: telco_churn_experiment
+2025-10-27 07:30:03 | telco_churn | INFO | Started pipeline run with ID: 8f502ffb54004f7daa714ee374fc5f83
+2025-10-27 07:30:03 | telco_churn | INFO | Step 1: Loading data
+2025-10-27 07:30:03 | telco_churn | INFO | Initialized DataLoader with path: artifacts/TelcoCustomerChurn.csv
+2025-10-27 07:30:03 | telco_churn | INFO | Loading data from artifacts/TelcoCustomerChurn.csv
+2025-10-27 07:30:03 | telco_churn | INFO | Data loaded successfully with shape (7043, 21)
+2025-10-27 07:30:03 | telco_churn | INFO | Validating data
+2025-10-27 07:30:03 | telco_churn | INFO | Data validation completed
+2025-10-27 07:30:03 | telco_churn | INFO | Step 2: Preprocessing data
+2025-10-27 07:30:03 | telco_churn | INFO | Initialized DataProcessor
+2025-10-27 07:30:03 | telco_churn | INFO | Starting fit_transform process
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: gender
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: Partner
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: Dependents
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: PhoneService
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: MultipleLines
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: InternetService
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineSecurity
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: OnlineBackup
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: DeviceProtection
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: TechSupport
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingTV
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: StreamingMovies
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: Contract
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: PaperlessBilling
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting LabelEncoder for column: PaymentMethod
+2025-10-27 07:30:03 | telco_churn | INFO | Fitting StandardScaler for numerical columns
+2025-10-27 07:30:04 | telco_churn | INFO | Fit_transform completed successfully
+2025-10-27 07:30:04 | telco_churn | INFO | Saving preprocessors to models/preprocessing
+2025-10-27 07:30:04 | telco_churn | INFO | Preprocessors saved successfully
+2025-10-27 07:30:04 | telco_churn | INFO | Step 3: Training and evaluating models
+2025-10-27 07:30:04 | telco_churn | INFO | MLflow setup completed successfully
+2025-10-27 07:30:04 | telco_churn | INFO | Initialized ModelTrainer with experiment: telco_churn_experiment
+2025-10-27 07:30:04 | telco_churn | INFO | Starting training of all models
+2025-10-27 07:30:04 | telco_churn | INFO | Training decision_tree model
+2025-10-27 07:30:04 | telco_churn | INFO | Creating model of type: decision_tree
+2025-10-27 07:30:04 | telco_churn | INFO | Successfully created decision_tree model
+2025-10-27 07:30:09 | telco_churn | INFO | Completed training decision_tree model
+2025-10-27 07:30:09 | telco_churn | INFO | Metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-10-27 07:30:09 | telco_churn | INFO | Training random_forest model
+2025-10-27 07:30:09 | telco_churn | INFO | Creating model of type: random_forest
+2025-10-27 07:30:09 | telco_churn | INFO | Successfully created random_forest model
+2025-10-27 07:30:13 | telco_churn | INFO | Completed training random_forest model
+2025-10-27 07:30:13 | telco_churn | INFO | Metrics: {'accuracy': 0.808374733853797, 'precision': 0.6782006920415224, 'recall': 0.5254691689008043, 'f1': 0.5921450151057401, 'roc_auc': 0.8568103243036219}
+2025-10-27 07:30:13 | telco_churn | INFO | Training gradient_boosting model
+2025-10-27 07:30:13 | telco_churn | INFO | Creating model of type: gradient_boosting
+2025-10-27 07:30:13 | telco_churn | INFO | Successfully created gradient_boosting model
+2025-10-27 07:30:18 | telco_churn | INFO | Completed training gradient_boosting model
+2025-10-27 07:30:18 | telco_churn | INFO | Metrics: {'accuracy': 0.8112136266855926, 'precision': 0.6851211072664359, 'recall': 0.5308310991957105, 'f1': 0.5981873111782477, 'roc_auc': 0.8590785346817518}
+2025-10-27 07:30:18 | telco_churn | INFO | Selecting best model
+2025-10-27 07:30:18 | telco_churn | INFO | Selected decision_tree as best model
+2025-10-27 07:30:18 | telco_churn | INFO | Best model metrics: {'accuracy': 0.794180269694819, 'precision': 0.6055979643765903, 'recall': 0.6380697050938338, 'f1': 0.6214099216710183, 'roc_auc': 0.8372853416419099}
+2025-10-27 07:30:18 | telco_churn | INFO | Completed training all models
+2025-10-27 07:30:18 | telco_churn | INFO | Pipeline execution completed successfully
+2025-10-27 07:43:08 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:43:08 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:43:08 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:43:08 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: 'mlruns/1/0b346ede29704e2bbb7a1c7c35b2c019/artifacts/random_forest/model.pkl'
+2025-10-27 07:51:50 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:51:50 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:51:50 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:51:50 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: '../../articrafts/gradient_boosting_model.pkl'
+2025-10-27 07:52:06 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:52:06 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:52:06 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:52:06 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: '../../articrafts/gradient_boosting_model.pkl'
+2025-10-27 07:53:01 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:53:01 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:53:01 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:53:01 | telco_churn | INFO | Loading model from local path: ../../artifacts/gradient_boosting_model.pkl
+2025-10-27 07:53:01 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: '../../artifacts/gradient_boosting_model.pkl'
+2025-10-27 07:53:10 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:53:10 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:53:10 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:53:10 | telco_churn | INFO | Loading model from local path: ../artifacts/gradient_boosting_model.pkl
+2025-10-27 07:53:10 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: '../artifacts/gradient_boosting_model.pkl'
+2025-10-27 07:55:15 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:55:15 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:55:15 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:55:15 | telco_churn | INFO | Loading model from local path: gradient_boosting_model.pkl
+2025-10-27 07:55:15 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: 'gradient_boosting_model.pkl'
+2025-10-27 07:56:07 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:56:07 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:56:07 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:56:07 | telco_churn | ERROR | Error loading model: [Errno 22] Invalid argument: 'D:\\Python\\dibimbing\\mlopsday2\x07rtifacts\\gradient_boosting_model.pkl'
+2025-10-27 07:57:40 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 07:57:40 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 07:57:40 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 07:57:40 | telco_churn | INFO | Initialized DataProcessor
+2025-10-27 07:57:40 | telco_churn | INFO | Loading preprocessors from models/preprocessing
+2025-10-27 07:57:40 | telco_churn | INFO | Preprocessors loaded successfully
+2025-10-27 07:57:40 | telco_churn | INFO | Model and preprocessor loaded successfully
+2025-10-27 07:58:29 | telco_churn | INFO | Received prediction request for customer: string
+2025-10-27 07:58:29 | telco_churn | INFO | Starting transform process
+2025-10-27 07:58:29 | telco_churn | ERROR | Error in transform: y contains previously unseen labels: 'string'
+2025-10-27 07:58:29 | telco_churn | ERROR | Error making prediction: y contains previously unseen labels: 'string'
+2025-10-27 08:00:09 | telco_churn | INFO | Received prediction request for customer: string
+2025-10-27 08:00:09 | telco_churn | INFO | Starting transform process
+2025-10-27 08:00:09 | telco_churn | ERROR | Error in transform: y contains previously unseen labels: 'string'
+2025-10-27 08:00:09 | telco_churn | ERROR | Error making prediction: y contains previously unseen labels: 'string'
+2025-10-27 08:00:31 | telco_churn | INFO | Received prediction request for customer: 7590-VHVEG
+2025-10-27 08:00:31 | telco_churn | INFO | Starting transform process
+2025-10-27 08:00:31 | telco_churn | INFO | Transform completed successfully
+2025-10-27 08:00:31 | telco_churn | INFO | Prediction completed for customer: 7590-VHVEG
+2025-10-27 08:00:32 | telco_churn | INFO | Received prediction request for customer: 7590-VHVEG
+2025-10-27 08:00:32 | telco_churn | INFO | Starting transform process
+2025-10-27 08:00:32 | telco_churn | INFO | Transform completed successfully
+2025-10-27 08:00:32 | telco_churn | INFO | Prediction completed for customer: 7590-VHVEG
+2025-10-27 08:15:46 | telco_churn | INFO | Loading configuration from config\config.yaml
+2025-10-27 08:15:46 | telco_churn | INFO | Configuration loaded successfully
+2025-10-27 08:15:46 | telco_churn | INFO | Loading best model from MLflow
+2025-10-27 08:15:46 | telco_churn | ERROR | Error loading model: [Errno 2] No such file or directory: 'mlruns/1/0b346ede29704e2bbb7a1c7c35b2c019/artifacts/random_forest/model.pkl'

@@ -1,5 +1,10 @@
-venv
+.venv
 mlflowdb
 mlruns
 mlops_day2.egg-info
 logs
+src/models/__pycache__
+src/utils/__pycache__
+src/api/__pycache__
+src/data/__pycache__
+src/data/__pycache__
